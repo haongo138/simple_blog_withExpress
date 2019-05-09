@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    block meta
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    block stylesheet
+      link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css")
+      link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css")
+      link(rel="stylesheet", type="text/css", href="./css/custom.css")
+    block title 
+      title Haoxray's Blog
+  body
+    block header
+      nav.navbar(role='navigation', aria-label='main navigation')
+        .navbar-brand
+          a.navbar-item.has-text-weight-bold(href='#') HaoXray's Blog
+          a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbarBasicExample')
+            span(aria-hidden='true')
+            span(aria-hidden='true')
+            span(aria-hidden='true')
+        #navbarBasicExample.navbar-menu
+          .navbar-start
+            a.navbar-item
+              | Home
+            a.navbar-item
+              | Blogs
+            .navbar-item.has-dropdown.is-hoverable
+              a.navbar-link
+                | More
+              .navbar-dropdown
+                a.navbar-item
+                  | About
+                a.navbar-item
+                  | Jobs
+                a.navbar-item
+                  | Contact
+                hr.navbar-divider
+                a.navbar-item
+                  | Report an issue
+          .navbar-end
+            .navbar-item
+              .buttons
+                a.button.is-primary
+                  strong Sign up
+                a.button.is-light
+                  | Log in
+      section.hero.is-dark
+        .hero-body                    
+    block content
+
+    block footer
+      footer.footer
+        .content.has-text-centered
+          p
+            strong Simple Express App
+            |  by 
+            a(href='https://fb.com/haongo138') Hao Ngo
+    
+    
+
