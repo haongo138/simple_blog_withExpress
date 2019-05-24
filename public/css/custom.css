@@ -7,3 +7,9 @@
   .section {
     flex: 1;
   }
+
+  .is-mid {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+  }

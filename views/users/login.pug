@@ -1,0 +1,26 @@
+extends ../partials/layout
+block content
+  .section
+    .container
+      if errors
+        each error in errors
+          p.has-text-danger.has-text-weight-bold= error
+      form(action="/users/login", method="POST")
+        .field
+          label.label Username
+          .control.has-icons-left.has-icons-right
+            input.input(type='text', name="username", placeholder='Username')
+            span.icon.is-small.is-left
+              i.fas.fa-user
+        .field
+          label.label Password
+          .control.has-icons-left.has-icons-right
+            input.input(type='password', name="password", placeholder='Password')
+            span.icon.is-small.is-left
+              i.fas.fa-lock
+      
+        .field.is-grouped
+          .control
+            button.button.is-link Login
+          .control
+            button.button.is-text Cancel

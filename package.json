@@ -5,14 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./start.js"
+    "start": "nodemon --inspect ./start.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bulma": "^0.7.4",
+    "cookie-parser": "^1.4.4",
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
+    "md5": "^2.2.1",
+    "mongoose": "^5.5.9",
+    "multer": "^1.4.1",
+    "node-inspect": "^1.11.5",
     "nodemon": "^1.19.0",
     "pug": "^2.0.3"
   },
@@ -20,6 +25,7 @@
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
-    "@babel/register": "^7.4.4"
+    "@babel/register": "^7.4.4",
+    "babel-polyfill": "^6.26.0"
   }
 }

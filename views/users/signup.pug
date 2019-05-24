@@ -1,0 +1,64 @@
+extends ../partials/layout
+block content
+  .section  
+    .container
+      if errors
+        each error in errors
+          p.has-text-danger.has-text-weight-bold= error
+      br     
+      form(action="/users/signup", method="POST", enctype="multipart/form-data")
+        .field
+          label.label Name
+          .control
+            input.input(type='text', name="name", placeholder='Your name')
+        .field
+          label.label Username
+          .control.has-icons-left.has-icons-right
+            input.input(type='text', name="username" placeholder='Username')
+            span.icon.is-small.is-left
+              i.fas.fa-user
+        .field
+          label.label Password
+          .control.has-icons-left.has-icons-right
+            input.input(type='password', name="password" placeholder='Password')
+            span.icon.is-small.is-left
+              i.fas.fa-lock
+        .field
+          label.label Email
+          .control.has-icons-left.has-icons-right
+            input.input(type='email', name="email" placeholder='Email')
+            span.icon.is-small.is-left
+              i.fas.fa-envelope
+        .field
+          label.label Gender
+          .control
+            .select
+              select(name='gender')
+                option Male
+                option Famale
+        .field
+          label.label Something about you
+          .control
+            textarea.textarea(placeholder='Textarea',  name="detail")
+        .field
+          label.label Upload profile picture
+          .file
+            label.file-label
+              input.file-input(type='file', name='avatar')
+              span.file-cta
+                span.file-icon
+                  i.fas.fa-upload
+                span.file-label
+                  | Choose a file&mldr;
+
+        .field
+          .control
+            label.checkbox
+              input(type='checkbox')
+              |       I agree to the 
+              a(href='#') terms and conditions
+        .field.is-grouped
+          .control
+            button.button.is-link Signup
+          .control
+            button.button.is-text Cancel

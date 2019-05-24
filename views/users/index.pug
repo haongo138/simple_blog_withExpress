@@ -1,0 +1,25 @@
+extends ../partials/layout
+block content
+  .section
+    h2.title.is-3.has-text-centered Ranking
+    .container 
+      table.table.is-responsive
+        thead
+          tr
+            th Avatar
+            th Name
+            th Username
+            th Gender
+            th Action
+        tbody
+          if users
+            each user in users
+              tr
+                td 
+                  img(src="/" + user.avatar, width="32")
+                td= user.name
+                td= user.username              
+                td= user.gender
+                td
+                  a.btn View profile
+            
